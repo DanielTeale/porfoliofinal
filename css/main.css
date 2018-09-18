@@ -1,0 +1,94 @@
+p {
+  margin: 0; }
+
+h2 {
+  margin: 2%; }
+
+.flexbox {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(64, 73, 104, 0.5);
+  z-index: 1; }
+  .flexbox .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right: 5%;
+    transition: 10s; }
+    .flexbox .dropdown .navmap {
+      display: none;
+      list-style: none;
+      position: absolute;
+      min-width: 160px;
+      z-index: 2; }
+      .flexbox .dropdown .navmap a {
+        border: 2px solid black; }
+    .flexbox .dropdown:hover .navmap {
+      display: block; }
+
+.title-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/jagged-mountain2.jpg");
+  background-position: fixed;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 600px;
+  padding-top: 10%; }
+  .title-page .preamble {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 3px #404968, 2px 2px 3px #404968, 2px 2px 3px #404968;
+    min-width: 450px;
+    width: 100%;
+    padding: 0%;
+    margin: 0; }
+    .title-page .preamble p:nth-of-type(1) {
+      order: 1;
+      margin: 0;
+      color: #5170A8; }
+    .title-page .preamble p:nth-of-type(2) {
+      order: 2;
+      margin: 0; }
+    .title-page .preamble p:nth-of-type(3) {
+      order: 3;
+      margin: 0; }
+
+#skills {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  #skills .card {
+    min-width: 300px;
+    height: 300px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #skills .card p {
+      margin: 10%;
+      border: 1px solid #404968;
+      width: 260px;
+      padding: 5px;
+      height: 500px; }
+    #skills .card img {
+      background: #C3DDF4;
+      padding: 20px;
+      padding-left: 100px;
+      padding-right: 100px; }
+
+/*# sourceMappingURL=main.css.map */

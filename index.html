@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Teale Web Dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="normalize.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="flexbox">
+      <h2>
+        Daniel Teale
+      </h2>
+      <div class="dropdown">
+        <button class="dropbtn">Hamburger</button>      
+        <ul class="navmap">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- end NAVBAR -->
+  </header>
+  <!-- TITLE PAGE -->
+  <article class="title-page">
+    <div class="preamble"><p>Daniel Teale: </p><p>Student, Technician, Aspiring Developer</p>
+    <p>Welcome to my Site</p></div>
+  </article>
+<!-- end TITLE PAGE -->
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="card card-one">
+      <img src="./icons/007-desktop-computer.png" alt="Desktop Computer Picture">
+      <p>Rich experience with and a passion for all things technical from a life-time of exposure</p>
+    </div>
+    <div class="card card-two">
+      <img src="./Icons/008-apple.png" alt="Apple iOS Picture">
+      <p>Former Apple Technician, experience in Macintosh and iOS hardware and software repair</p>
+    </div>
+    <div class="card card-three">
+      <img src="./Icons/006-reading.png" alt="Reading Picture">
+      <p>Current student at Coder Academy coder Bootcamp. Studying Ruby on Rails, HTML/CSS and Full Stack Javascript</p>
+    </div>
+  </section>
+  <!-- end SKILLS -->
+  <!-- BLOG -->
+  <article id="blog">
+
+  </article>
+  <!-- end BLOG -->
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+  </section>
+  <!-- end CONTACT -->
+  <!-- FOOTER -->
+  <footer>
+    <h4>Site Map</h4>
+    <h4>External Links</h4>
+  </footer>
+    <script>
+      $(document).ready(function () {
+        $(“a”).on(‘click’, function (event) {
+          if (this.hash !== “”) {
+          event.preventDefault();
+          var hash = this.hash;
+          $(‘html, body’).animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        };
+      });
+      });
+    </script>
+</body>
+</html>
