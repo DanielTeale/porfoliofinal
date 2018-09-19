@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great');
+
 $skyblue: rgb(153, 205, 251);
 $skybluetrans: rgba(153, 205, 251,0.7);
 $freshblue: #74A2E7;
@@ -49,6 +51,8 @@ $steelblue: #5170A8;
 }
 body {
   width:100vw;
+  background-color: rgb(206, 229, 255);
+  font-family: abril fatface, cursive;
   // color: blue;
   // background: url('../images/logo.png');
   // background-attachment: fixed;
@@ -106,7 +110,7 @@ h2{
       text-align: center;
       list-style: none;
       position: absolute;
-      min-width:160px;
+      min-width:200px;
       z-index: 2;
       transform: translate(100%,0);
       transition: all 1s ease;
@@ -114,15 +118,19 @@ h2{
         display:inline-block;
         padding: 10%;
         width:100%;
-        border:2px solid black;
+        // border-style: 
         background: $freshblue;
+        border:4px groove $lightbluetrans;
       }
       a {
         margin:0;
         padding:10%;
         text-decoration: none;
         width:100%;
-        color:$steelblue;
+        font-size: 24px;
+        color:white;
+        text-shadow: 1px 1px 1px black;
+        }
       }
     }
     .hamburger {
@@ -146,14 +154,12 @@ h2{
     }
     input:checked ~ .navmap{
       opacity: 1;
-      transform: translate(-55%,0%);
+      transform: translate(-80%,0%);
       .hamburger{
         border: 1px solid white;
       }
     }
-    
   }
-}
 
 .title-page {
   display:flex;
@@ -166,10 +172,9 @@ h2{
   background-size: cover;
   background-position:center;
   width:100%;
-  // min-width:1000px;
   min-height: 600px;
-  // padding:0.5vw;
-  padding-top:10%;
+  font-family: fredericka the great;
+  box-shadow: 3px 3px 3px $darkgreytrans;
   .preamble {
     display:flex;
     flex-direction:row;
@@ -177,8 +182,8 @@ h2{
     justify-content: center;
     align-items: center;
     position: relative;
-    color:white;
-    font-size:40px;
+    color:$lightblue;
+    font-size:54px;
     text-align: center;
     text-shadow: 2px 2px 3px $darkgrey, 2px 2px 3px $darkgrey, 2px 2px 3px $darkgrey;
     min-width:450px;
@@ -210,6 +215,7 @@ h2{
   justify-content: space-evenly;
   flex-wrap: wrap;
   height:100%;
+  margin-top:5%;
   .card {
     min-width:300px;
     height:300px;
@@ -228,7 +234,7 @@ h2{
       width:260px;
       padding: 5px;
       height:500px;
-      background: white;
+      background: $lightblue;
     }
     img{
       background: $lightblue;
@@ -255,6 +261,9 @@ h2{
   display: grid;
   grid-row:repeat(3,33%);
   text-align: center;
+  color:$lightblue;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black, ;
+  box-shadow: 3px 3px 3px 5px $darkgreytrans;
   .box1{
     grid-row-start: 1;
     grid-row-end: 2;
@@ -283,6 +292,7 @@ h2{
 
 .blog {
   padding: 10%;
+  box-shadow: 3px 3px 3px $darkgreytrans;
 }
 
 .contact-container {
