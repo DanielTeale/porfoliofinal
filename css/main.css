@@ -16,7 +16,8 @@ h2 {
   align-items: center;
   background: black;
   opacity: 0.7;
-  z-index: 1; }
+  z-index: 1;
+  box-shadow: 3px 3px 3px rgba(195, 221, 244, 0.7); }
   .flexbox img {
     width: 70px;
     overflow: hidden;
@@ -27,6 +28,9 @@ h2 {
     position: relative;
     display: inline-block;
     padding-right: 5%; }
+    .flexbox .dropdown .hamburger {
+      opacity: 1;
+      z-index: 3; }
     .flexbox .dropdown .navmap {
       opacity: 0;
       list-style: none;
@@ -36,6 +40,9 @@ h2 {
       transition: all 1s ease; }
       .flexbox .dropdown .navmap a {
         border: 2px solid black; }
+    .flexbox .dropdown .hamburger {
+      opacity: 1;
+      z-index: 3; }
     .flexbox .dropdown input[type="checkbox"] {
       opacity: 0;
       height: 70px;
@@ -94,7 +101,8 @@ h2 {
 #skills {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  height: 100%; }
   #skills .card {
     min-width: 300px;
     height: 300px;
@@ -102,18 +110,27 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: #99CDFB;
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px 4px rgba(64, 73, 104, 0.5);
+    transition: all 0.5s linear; }
     #skills .card p {
       margin: 10%;
-      border: 1px solid #404968;
       width: 260px;
       padding: 5px;
-      height: 500px; }
+      height: 500px;
+      background: white; }
     #skills .card img {
       background: #C3DDF4;
       padding: 20px;
       padding-left: 100px;
-      padding-right: 100px; }
+      padding-right: 100px;
+      margin: 3%; }
+    #skills .card:hover {
+      box-shadow: 7px 7px 10px 10px rgba(64, 73, 104, 0.5);
+      margin-left: 5px;
+      margin-bottom: 5px; }
 
 .picture {
   background: url("../images/snowy-valley.JPG");
