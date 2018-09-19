@@ -1,3 +1,7 @@
+body {
+  background: url("../images/logo.png");
+  background-attachment: fixed; }
+
 p {
   margin: 0; }
 
@@ -10,23 +14,40 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(64, 73, 104, 0.5);
+  background: black;
+  opacity: 0.7;
   z-index: 1; }
+  .flexbox img {
+    width: 70px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1; }
   .flexbox .dropdown {
     position: relative;
     display: inline-block;
-    padding-right: 5%;
-    transition: 10s; }
+    padding-right: 5%; }
     .flexbox .dropdown .navmap {
-      display: none;
+      opacity: 0;
       list-style: none;
       position: absolute;
       min-width: 160px;
-      z-index: 2; }
+      z-index: 2;
+      transition: all 1s ease; }
       .flexbox .dropdown .navmap a {
         border: 2px solid black; }
-    .flexbox .dropdown:hover .navmap {
-      display: block; }
+    .flexbox .dropdown input[type="checkbox"] {
+      opacity: 0;
+      height: 70px;
+      width: 70px;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      z-index: 2;
+      cursor: pointer;
+      -webkit-touch-callout: none; }
+    .flexbox .dropdown input:checked ~ .navmap {
+      opacity: 1; }
 
 .title-page {
   display: flex;
@@ -35,7 +56,7 @@ h2 {
   justify-content: center;
   align-items: center;
   background-image: url("../images/jagged-mountain2.jpg");
-  background-position: fixed;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -57,15 +78,18 @@ h2 {
     padding: 0%;
     margin: 0; }
     .title-page .preamble p:nth-of-type(1) {
-      order: 1;
+      order: 2;
       margin: 0;
       color: #5170A8; }
     .title-page .preamble p:nth-of-type(2) {
-      order: 2;
-      margin: 0; }
-    .title-page .preamble p:nth-of-type(3) {
       order: 3;
       margin: 0; }
+    .title-page .preamble p:nth-of-type(3) {
+      order: 4;
+      margin: 0; }
+    .title-page .preamble img {
+      width: 300px;
+      order: 1; }
 
 #skills {
   display: flex;
@@ -90,5 +114,54 @@ h2 {
       padding: 20px;
       padding-left: 100px;
       padding-right: 100px; }
+
+.picture {
+  background: url("../images/snowy-valley.JPG");
+  background-attachment: fixed;
+  background-position: center;
+  height: 600px;
+  min-width: 1000px;
+  display: grid;
+  grid-row: repeat(3, 1fr);
+  text-align: center; }
+  .picture .box1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 200px;
+    display: flex;
+    justify-content: flex-start; }
+    .picture .box1 box1-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .picture .box1 box1-content h3 {
+        background-color: #74A2E7; }
+      .picture .box1 box1-content p {
+        display: none; }
+    .picture .box1:hover p {
+      display: block; }
+  .picture .box2 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    transition-delay: 10s; }
+    .picture .box2 p {
+      display: none; }
+    .picture .box2:hover p {
+      display: block;
+      background-color: #C3DDF4;
+      transition: all 10s ease; }
+  .picture .box3 {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    width: 200px;
+    display: flex;
+    justify-content: flex-end; }
+    .picture .box3 p {
+      display: none; }
+    .picture .box3:hover p {
+      display: block; }
 
 /*# sourceMappingURL=main.css.map */

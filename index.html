@@ -15,10 +15,10 @@
   <header class="navbar">
     <div class="flexbox">
       <h2>
-        Daniel Teale
+        <!-- <img src="./images/logo.png" alt=""> -->
       </h2>
       <div class="dropdown">
-        <button class="dropbtn">Hamburger</button>      
+        <input class="dropbtn" type="checkbox"><img src="./images/logo.png" alt="">      
         <ul class="navmap">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -30,9 +30,9 @@
     <!-- end NAVBAR -->
   </header>
   <!-- TITLE PAGE -->
-  <article class="title-page">
+  <article class="title-page" id="about">
     <div class="preamble"><p>Daniel Teale: </p><p>Student, Technician, Aspiring Developer</p>
-    <p>Welcome to my Site</p></div>
+    <p>Welcome to my Site</p><p><img src="./images/logo.png" alt=""><br></p></div>
   </article>
 <!-- end TITLE PAGE -->
   <!-- SKILLS -->
@@ -51,6 +51,27 @@
     </div>
   </section>
   <!-- end SKILLS -->
+  <!-- PICTURE -->
+  <section class="picture">
+      <div class="box1">
+        <div class="box1-content">
+          <h2>Beautiful Spaces</h2><br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam in distinctio,</p>
+        </div>
+      </div>
+      <div class="box2">
+        <div class="box2-content">
+          <h2>Functional Designs</h2><br>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, explicabo.</p>
+        </div>
+      </div>
+      <div class="box3">
+        <div class="box3-content">
+          <h2>Results</h2><br>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique suscipit</p>
+        </div>
+      </div>
+  </section>
   <!-- BLOG -->
   <article id="blog">
 
@@ -66,20 +87,19 @@
     <h4>Site Map</h4>
     <h4>External Links</h4>
   </footer>
-    <script>
-      $(document).ready(function () {
-        $(“a”).on(‘click’, function (event) {
-          if (this.hash !== “”) {
+  <script>$(document).ready(function () {
+      $("a").on('click', function (event) {
+        if (this.hash !== "") {
           event.preventDefault();
           var hash = this.hash;
-          $(‘html, body’).animate({
+          $('html, body').animate({
             scrollTop: $(hash).offset().top
           }, 800, function () {
             window.location.hash = hash;
           });
         };
       });
-      });
-    </script>
+    });
+  </script>
 </body>
 </html>
