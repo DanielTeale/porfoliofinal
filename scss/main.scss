@@ -1,14 +1,57 @@
-$skyblue: #99CDFB;
+$skyblue: rgb(153, 205, 251);
+$skybluetrans: rgba(153, 205, 251,0.7);
 $freshblue: #74A2E7;
 $darkgrey: #404968;
 $darkgreytrans: rgba(64, 73, 104,0.5);
 $lightblue: #C3DDF4;
 $lightbluetrans: rgba(195, 221, 244,0.7);
 $steelblue: #5170A8;
+
+@mixin card-animation {
+  .box-content {
+    box-shadow: 7px 7px 5px 5px $darkgreytrans;
+    border: 1px solid white;
+    transform:scale(1.02,1.02);
+  }
+  p{
+    background-color: $skybluetrans;
+  }
+}
+@mixin card-format {
+  width:100%;
+  height:100%;
+  transition: all 1s ease;
+  .box-content{
+    margin:5%;
+    width: 200px;
+    border-radius: 30px; 
+    overflow: hidden;
+    transition: all 1s ease;
+    h2 {
+      background: $steelblue;
+      margin:0;
+      width:100%;
+      padding:5% 5% 5% 0%;
+      // height:75px;
+      z-index: 1;
+    }
+    p{
+      margin:0;
+      padding-top:10%;
+      height:100%;
+      transition: all 1s ease;
+    }
+  }
+  &:hover{
+    @include card-animation()
+  }
+  
+}
 body {
+  width:100vw;
   // color: blue;
-  background: url('../images/logo.png');
-  background-attachment: fixed;
+  // background: url('../images/logo.png');
+  // background-attachment: fixed;
   // background-size: cover;
 }
 
@@ -21,14 +64,14 @@ h2{
 }
 .flexbox {
   position: fixed;
-  width:100%;
+  width:100vw;
+  height:75px;
   display:flex;
   justify-content: space-between;
   align-items:center;
-  background: black;
-  opacity: 0.7;
+  background: $skybluetrans;
   z-index: 1;
-  box-shadow: 3px 3px 3px $lightbluetrans;
+  box-shadow: 3px 3px 3px $darkgreytrans;
   // position: fixed; 
   // padding-left:5%;
   // padding-right:85%;
@@ -58,13 +101,28 @@ h2{
     .navmap {
       // display:none;
       opacity:0;
+      padding: 0;
+      
+      text-align: center;
       list-style: none;
       position: absolute;
       min-width:160px;
       z-index: 2;
+      transform: translate(100%,0);
       transition: all 1s ease;
-      a {
+      li {
+        display:inline-block;
+        padding: 10%;
+        width:100%;
         border:2px solid black;
+        background: $freshblue;
+      }
+      a {
+        margin:0;
+        padding:10%;
+        text-decoration: none;
+        width:100%;
+        color:$steelblue;
       }
     }
     .hamburger {
@@ -88,6 +146,7 @@ h2{
     }
     input:checked ~ .navmap{
       opacity: 1;
+      transform: translate(-55%,0%);
       .hamburger{
         border: 1px solid white;
       }
@@ -162,7 +221,7 @@ h2{
     background-color: $skyblue;
     border-radius:30px;
     box-shadow: 4px 4px 4px 4px $darkgreytrans;
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     p {
       margin:10%;
       // border: 1px solid $darkgrey;
@@ -179,9 +238,10 @@ h2{
       margin:3%;
     }
     &:hover {
-      box-shadow: 7px 7px 10px 10px $darkgreytrans;
-      margin-left:5px;
-      margin-bottom: 5px;
+      box-shadow: 7px 7px 8px 5px $darkgreytrans;
+      transform:scale(1.02,1.02);
+      // margin-left:5px;
+      // margin-bottom: 5px;
     }
   }
 }
@@ -190,67 +250,53 @@ h2{
   background: url('../images/snowy-valley.JPG');
   background-attachment: fixed;
   background-position: center;
-  height:600px;
-  min-width:1000px;
+  min-height:600px;
+  width:100%;
   display: grid;
-  grid-row:repeat(3,1fr);
+  grid-row:repeat(3,33%);
   text-align: center;
-
   .box1{
     grid-row-start: 1;
     grid-row-end: 2;
-    width:200px;
     display: flex;
     justify-content: flex-start;
-    box1-content{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      h3{
-        background-color: $freshblue;
-      }
-      p{
-        display:none;
-      }
-    }
-      &:hover{
-      p{
-        display:block;
-      }
-    }
+    align-content: center;
+    @include card-format()
   }
   .box2{
     grid-row-start: 2;
     grid-row-end: 3;
-    width:200px;
     display: flex;
     justify-content: center;
-    transition-delay: 10s;
-    p{
-      display:none;
-      
-    }
-    &:hover{
-      p{
-        display:block;
-        background-color: $lightblue;
-        transition: all 10s ease;
-      }
-    }
+    align-content: center;
+    @include card-format()
   }
   .box3{
     grid-row-start: 3;
     grid-row-end: 4;
-    width:200px;
     display: flex;
     justify-content: flex-end;
-    p{
-      display:none;
-    }
-    &:hover{
-      p{
-        display:block;
-      }
-    }
+    align-content: center;
+    @include card-format()
+  }
+}
+
+.blog {
+  padding: 10%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:400px;
+  margin:auto;
+  text-align: center;
+  img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius:50%;
   }
 }

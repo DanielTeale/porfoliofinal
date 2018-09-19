@@ -1,6 +1,5 @@
 body {
-  background: url("../images/logo.png");
-  background-attachment: fixed; }
+  width: 100vw; }
 
 p {
   margin: 0; }
@@ -10,14 +9,14 @@ h2 {
 
 .flexbox {
   position: fixed;
-  width: 100%;
+  width: 100vw;
+  height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: black;
-  opacity: 0.7;
+  background: rgba(153, 205, 251, 0.7);
   z-index: 1;
-  box-shadow: 3px 3px 3px rgba(195, 221, 244, 0.7); }
+  box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
   .flexbox img {
     width: 70px;
     overflow: hidden;
@@ -35,13 +34,26 @@ h2 {
       z-index: 3; }
     .flexbox .dropdown .navmap {
       opacity: 0;
+      padding: 0;
+      text-align: center;
       list-style: none;
       position: absolute;
       min-width: 160px;
       z-index: 2;
+      transform: translate(100%, 0);
       transition: all 1s ease; }
+      .flexbox .dropdown .navmap li {
+        display: inline-block;
+        padding: 10%;
+        width: 100%;
+        border: 2px solid black;
+        background: #74A2E7; }
       .flexbox .dropdown .navmap a {
-        border: 2px solid black; }
+        margin: 0;
+        padding: 10%;
+        text-decoration: none;
+        width: 100%;
+        color: #5170A8; }
     .flexbox .dropdown .hamburger {
       opacity: 1;
       z-index: 3; }
@@ -56,7 +68,8 @@ h2 {
       cursor: pointer;
       -webkit-touch-callout: none; }
     .flexbox .dropdown input:checked ~ .navmap {
-      opacity: 1; }
+      opacity: 1;
+      transform: translate(-55%, 0%); }
       .flexbox .dropdown input:checked ~ .navmap .hamburger {
         border: 1px solid white; }
 
@@ -115,10 +128,10 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #99CDFB;
+    background-color: #99cdfb;
     border-radius: 30px;
     box-shadow: 4px 4px 4px 4px rgba(64, 73, 104, 0.5);
-    transition: all 0.5s linear; }
+    transition: all 0.3s linear; }
     #skills .card p {
       margin: 10%;
       width: 260px;
@@ -132,57 +145,130 @@ h2 {
       padding-right: 100px;
       margin: 3%; }
     #skills .card:hover {
-      box-shadow: 7px 7px 10px 10px rgba(64, 73, 104, 0.5);
-      margin-left: 5px;
-      margin-bottom: 5px; }
+      box-shadow: 7px 7px 8px 5px rgba(64, 73, 104, 0.5);
+      transform: scale(1.02, 1.02); }
 
 .picture {
   background: url("../images/snowy-valley.JPG");
   background-attachment: fixed;
   background-position: center;
-  height: 600px;
-  min-width: 1000px;
+  min-height: 600px;
+  width: 100%;
   display: grid;
-  grid-row: repeat(3, 1fr);
+  grid-row: repeat(3, 33%);
   text-align: center; }
   .picture .box1 {
     grid-row-start: 1;
     grid-row-end: 2;
-    width: 200px;
     display: flex;
-    justify-content: flex-start; }
-    .picture .box1 box1-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center; }
-      .picture .box1 box1-content h3 {
-        background-color: #74A2E7; }
-      .picture .box1 box1-content p {
-        display: none; }
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box1 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease; }
+      .picture .box1 .box-content h2 {
+        background: #5170A8;
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box1 .box-content p {
+        margin: 0;
+        padding-top: 10%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box1:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid white;
+      transform: scale(1.02, 1.02); }
     .picture .box1:hover p {
-      display: block; }
+      background-color: rgba(153, 205, 251, 0.7); }
   .picture .box2 {
     grid-row-start: 2;
     grid-row-end: 3;
-    width: 200px;
     display: flex;
     justify-content: center;
-    transition-delay: 10s; }
-    .picture .box2 p {
-      display: none; }
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box2 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease; }
+      .picture .box2 .box-content h2 {
+        background: #5170A8;
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box2 .box-content p {
+        margin: 0;
+        padding-top: 10%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box2:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid white;
+      transform: scale(1.02, 1.02); }
     .picture .box2:hover p {
-      display: block;
-      background-color: #C3DDF4;
-      transition: all 10s ease; }
+      background-color: rgba(153, 205, 251, 0.7); }
   .picture .box3 {
     grid-row-start: 3;
     grid-row-end: 4;
-    width: 200px;
     display: flex;
-    justify-content: flex-end; }
-    .picture .box3 p {
-      display: none; }
+    justify-content: flex-end;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease; }
+    .picture .box3 .box-content {
+      margin: 5%;
+      width: 200px;
+      border-radius: 30px;
+      overflow: hidden;
+      transition: all 1s ease; }
+      .picture .box3 .box-content h2 {
+        background: #5170A8;
+        margin: 0;
+        width: 100%;
+        padding: 5% 5% 5% 0%;
+        z-index: 1; }
+      .picture .box3 .box-content p {
+        margin: 0;
+        padding-top: 10%;
+        height: 100%;
+        transition: all 1s ease; }
+    .picture .box3:hover .box-content {
+      box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
+      border: 1px solid white;
+      transform: scale(1.02, 1.02); }
     .picture .box3:hover p {
-      display: block; }
+      background-color: rgba(153, 205, 251, 0.7); }
+
+.blog {
+  padding: 10%; }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
+  margin: auto;
+  text-align: center; }
+  .contact-container img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 50%; }
 
 /*# sourceMappingURL=main.css.map */
