@@ -30,6 +30,8 @@ h2 {
     padding-right: 5%; }
     .flexbox .dropdown .hamburger {
       opacity: 1;
+      right: 0;
+      top: 0;
       z-index: 3; }
     .flexbox .dropdown .navmap {
       opacity: 0;
@@ -55,6 +57,8 @@ h2 {
       -webkit-touch-callout: none; }
     .flexbox .dropdown input:checked ~ .navmap {
       opacity: 1; }
+      .flexbox .dropdown input:checked ~ .navmap .hamburger {
+        border: 1px solid white; }
 
 .title-page {
   display: flex;

@@ -47,6 +47,9 @@ h2{
     padding-right:5%;
     .hamburger {
       opacity:1;
+      // position: relative;
+      right:0;
+      top:0;
       z-index: 3;
       // position: relative;
       // padding: 10%;
@@ -84,9 +87,10 @@ h2{
       -webkit-touch-callout: none;
     }
     input:checked ~ .navmap{
-     
       opacity: 1;
-      
+      .hamburger{
+        border: 1px solid white;
+      }
     }
     
   }
