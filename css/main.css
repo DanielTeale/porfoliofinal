@@ -2,7 +2,8 @@
 body {
   width: 100vw;
   background-color: #e3effd;
-  font-family: abril fatface, cursive; }
+  font-family: abril fatface, cursive;
+  color: #404968; }
 
 p {
   margin: 0; }
