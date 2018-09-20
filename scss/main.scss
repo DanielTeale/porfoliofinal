@@ -8,11 +8,12 @@ $darkgreytrans: rgba(64, 73, 104,0.5);
 $lightblue: #C3DDF4;
 $lightbluetrans: rgba(195, 221, 244,0.7);
 $steelblue: #5170A8;
+$white:rgb(227, 239, 253);
 
 @mixin card-animation {
   .box-content {
     box-shadow: 7px 7px 5px 5px $darkgreytrans;
-    border: 1px solid white;
+    border: 1px solid $white;
     transform:scale(1.02,1.02);
   }
   p{
@@ -51,7 +52,7 @@ $steelblue: #5170A8;
 }
 body {
   width:100vw;
-  background-color: rgb(206, 229, 255);
+  background-color: $white;
   font-family: abril fatface, cursive;
   // color: blue;
   // background: url('../images/logo.png');
@@ -65,6 +66,7 @@ p {
 
 h2{
   margin:2%;
+  font-family:fredericka the great, cursive;
 }
 .flexbox {
   position: fixed;
@@ -105,8 +107,6 @@ h2{
     .navmap {
       // display:none;
       opacity:0;
-      padding: 0;
-      
       text-align: center;
       list-style: none;
       position: absolute;
@@ -123,12 +123,12 @@ h2{
         border:4px groove $lightbluetrans;
       }
       a {
-        margin:0;
+        margin:10%;
         padding:10%;
         text-decoration: none;
         width:100%;
         font-size: 24px;
-        color:white;
+        color:$white;
         text-shadow: 1px 1px 1px black;
         }
       }
@@ -173,6 +173,7 @@ h2{
   background-position:center;
   width:100%;
   min-height: 600px;
+  padding-top:20%; 
   font-family: fredericka the great;
   box-shadow: 3px 3px 3px $darkgreytrans;
   .preamble {
@@ -302,11 +303,56 @@ h2{
   width:400px;
   margin:auto;
   text-align: center;
-  img {
+  .profile {
     width: 400px;
     height: 400px;
     object-fit: cover;
     overflow: hidden;
     border-radius:50%;
+  }
+  p {
+    padding:5%;
+  }
+}
+
+footer {
+  background: $darkgrey;
+  color: $white;
+}
+
+@media (min-width:876px) {
+  .title-page{
+    padding-top: 0;
+  }
+  .hamburger {
+    display: none;
+
+  }
+  input {
+    display: none;
+  }
+  .flexbox .dropdown {
+    .navmap {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      opacity: 1;
+      transform: translate(-50%,0);
+      width:100%;
+      li {
+        z-index: inherit;
+        // padding: 0;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        margin:2%;
+        &:hover {
+          background:$steelblue;
+        }
+        a{
+          text-align: left;
+          padding: 0;
+        }
+      }
+    }
   }
 }

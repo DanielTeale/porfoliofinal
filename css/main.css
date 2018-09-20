@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great");
 body {
   width: 100vw;
-  background-color: #cee5ff;
+  background-color: #e3effd;
   font-family: abril fatface, cursive; }
 
 p {
   margin: 0; }
 
 h2 {
-  margin: 2%; }
+  margin: 2%;
+  font-family: fredericka the great, cursive; }
 
 .flexbox {
   position: fixed;
@@ -37,7 +38,6 @@ h2 {
       z-index: 3; }
     .flexbox .dropdown .navmap {
       opacity: 0;
-      padding: 0;
       text-align: center;
       list-style: none;
       position: absolute;
@@ -52,12 +52,12 @@ h2 {
         background: #74A2E7;
         border: 4px groove rgba(195, 221, 244, 0.7); }
       .flexbox .dropdown .navmap a {
-        margin: 0;
+        margin: 10%;
         padding: 10%;
         text-decoration: none;
         width: 100%;
         font-size: 24px;
-        color: white;
+        color: #e3effd;
         text-shadow: 1px 1px 1px black; }
   .flexbox .hamburger {
     opacity: 1;
@@ -90,6 +90,7 @@ h2 {
   background-position: center;
   width: 100%;
   min-height: 600px;
+  padding-top: 20%;
   font-family: fredericka the great;
   box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
   .title-page .preamble {
@@ -195,7 +196,7 @@ h2 {
         transition: all 1s ease; }
     .picture .box1:hover .box-content {
       box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
-      border: 1px solid white;
+      border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box1:hover p {
       background-color: rgba(153, 205, 251, 0.7); }
@@ -227,7 +228,7 @@ h2 {
         transition: all 1s ease; }
     .picture .box2:hover .box-content {
       box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
-      border: 1px solid white;
+      border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box2:hover p {
       background-color: rgba(153, 205, 251, 0.7); }
@@ -259,7 +260,7 @@ h2 {
         transition: all 1s ease; }
     .picture .box3:hover .box-content {
       box-shadow: 7px 7px 5px 5px rgba(64, 73, 104, 0.5);
-      border: 1px solid white;
+      border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box3:hover p {
       background-color: rgba(153, 205, 251, 0.7); }
@@ -275,11 +276,45 @@ h2 {
   width: 400px;
   margin: auto;
   text-align: center; }
-  .contact-container img {
+  .contact-container .profile {
     width: 400px;
     height: 400px;
     object-fit: cover;
     overflow: hidden;
     border-radius: 50%; }
+  .contact-container p {
+    padding: 5%; }
+
+footer {
+  background: #404968;
+  color: #e3effd; }
+
+@media (min-width: 876px) {
+  .title-page {
+    padding-top: 0; }
+
+  .hamburger {
+    display: none; }
+
+  input {
+    display: none; }
+
+  .flexbox .dropdown .navmap {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    width: 100%; }
+    .flexbox .dropdown .navmap li {
+      z-index: inherit;
+      padding-top: 3%;
+      padding-bottom: 3%;
+      margin: 2%; }
+      .flexbox .dropdown .navmap li:hover {
+        background: #5170A8; }
+      .flexbox .dropdown .navmap li a {
+        text-align: left;
+        padding: 0; } }
 
 /*# sourceMappingURL=main.css.map */
