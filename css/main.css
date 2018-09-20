@@ -31,6 +31,16 @@ h2 {
     position: relative;
     display: inline-block;
     padding-right: 5%; }
+    .flexbox .dropdown span {
+      position: relative;
+      display: block;
+      height: 4px;
+      width: 40px;
+      background-color: #404968;
+      z-index: 2;
+      opacity: 1;
+      margin-bottom: 5px;
+      transition: transform 0.4s ease; }
     .flexbox .dropdown .hamburger {
       opacity: 1;
       right: 0;
@@ -43,40 +53,43 @@ h2 {
       position: absolute;
       min-width: 200px;
       z-index: 2;
-      transform: translate(100%, 0);
-      transition: all 1s ease; }
+      transition: all 0.4s ease; }
       .flexbox .dropdown .navmap li {
         display: inline-block;
-        padding: 10%;
+        padding: 20px;
         width: 100%;
         background: #74A2E7;
         border: 4px groove rgba(195, 221, 244, 0.7); }
       .flexbox .dropdown .navmap a {
-        margin: 10%;
-        padding: 10%;
+        margin: 20px;
+        padding: 20px;
         text-decoration: none;
         width: 100%;
         font-size: 24px;
         color: #e3effd;
         text-shadow: 1px 1px 1px black; }
-  .flexbox .hamburger {
-    opacity: 1;
-    z-index: 3; }
   .flexbox input[type="checkbox"] {
     opacity: 0;
+    background: black;
     height: 70px;
     width: 70px;
     margin: 0;
     padding: 0;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
+    top: -25px;
+    right: 11px;
     -webkit-touch-callout: none; }
   .flexbox input:checked ~ .navmap {
     opacity: 1;
     transform: translate(-80%, 0%); }
-    .flexbox input:checked ~ .navmap .hamburger {
-      border: 1px solid white; }
+  .flexbox input:checked ~ span:nth-of-type(1) {
+    transform: translate(0, 9px) rotate(45deg); }
+  .flexbox input:checked ~ span:nth-of-type(2) {
+    opacity: 0; }
+  .flexbox input:checked ~ span:nth-of-type(3) {
+    transform: translate(0, -9px) rotate(-45deg); }
 
 .title-page {
   display: flex;
@@ -285,6 +298,23 @@ h2 {
   .contact-container p {
     padding: 5%; }
 
+.picture2 {
+  background-image: url("../images/birds-flying.JPG");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  box-shadow: 4px 4px 4px 4px #404968; }
+  .picture2 h2 {
+    color: #C3DDF4;
+    font-size: 56px;
+    font-family: fredericka the great, cursive;
+    text-shadow: 2px 2px 2px #404968;
+    padding-top: 200px; }
+    .picture2 h2 span {
+      color: #99cdfb;
+      font-family: abril fatface, cursive; }
+
 footer {
   background: #404968;
   color: #e3effd; }
@@ -304,13 +334,13 @@ footer {
     justify-content: space-evenly;
     position: relative;
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translate(0, 0);
     width: 100%; }
     .flexbox .dropdown .navmap li {
       z-index: inherit;
-      padding-top: 3%;
-      padding-bottom: 3%;
-      margin: 2%; }
+      padding-top: 6px;
+      padding-bottom: 6px;
+      margin: 4px; }
       .flexbox .dropdown .navmap li:hover {
         background: #5170A8; }
       .flexbox .dropdown .navmap li a {
