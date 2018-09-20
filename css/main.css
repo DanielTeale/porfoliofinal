@@ -40,7 +40,7 @@ h2 {
       z-index: 2;
       opacity: 1;
       margin-bottom: 5px;
-      transition: transform 0.4s ease; }
+      transition: all 0.4s ease; }
     .flexbox .dropdown .hamburger {
       opacity: 1;
       right: 0;
@@ -85,11 +85,13 @@ h2 {
     opacity: 1;
     transform: translate(-80%, 0%); }
   .flexbox input:checked ~ span:nth-of-type(1) {
-    transform: translate(0, 9px) rotate(45deg); }
+    transform-origin: 0% 0%;
+    transform: translate(2px, -5px) rotate(45deg); }
   .flexbox input:checked ~ span:nth-of-type(2) {
     opacity: 0; }
   .flexbox input:checked ~ span:nth-of-type(3) {
-    transform: translate(0, -9px) rotate(-45deg); }
+    transform-origin: 0% 100%;
+    transform: translate(1px, 4px) rotate(-45deg); }
 
 .title-page {
   display: flex;
@@ -323,8 +325,8 @@ footer {
   .title-page {
     padding-top: 0; }
 
-  .hamburger {
-    display: none; }
+  .flexbox .dropdown span {
+    opacity: 0; }
 
   input {
     display: none; }
