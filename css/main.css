@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Fredericka+the+Great");
+@import url("https://fonts.googleapis.com/css?family=Cinzel:700|Fauna+One");
 body {
   width: 100vw;
   background-color: #e3effd;
-  font-family: abril fatface, cursive;
+  font-family: "Fauna One", cursive;
   color: #404968; }
 
 p {
@@ -10,7 +10,7 @@ p {
 
 h2 {
   margin: 2%;
-  font-family: fredericka the great, cursive; }
+  font-family: "Fauna One", cursive; }
 
 .flexbox {
   position: fixed;
@@ -100,14 +100,14 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/jagged-mountain2.jpg");
+  background-image: url("../images/jagged-mountain2.JPG");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   width: 100%;
   min-height: 600px;
   padding-top: 20%;
-  font-family: fredericka the great;
+  font-family: "Cinzel", Arial, Helvetica, sans-serif;
   box-shadow: 3px 3px 3px rgba(64, 73, 104, 0.5); }
   .title-page .preamble {
     display: flex;
@@ -183,7 +183,20 @@ h2 {
   text-align: center;
   color: #C3DDF4;
   text-shadow: 1px 1px 1px black, 1px 1px 1px black;
-  box-shadow: 3px 3px 3px 5px rgba(64, 73, 104, 0.5); }
+  box-shadow: 3px 3px 3px 5px rgba(64, 73, 104, 0.5);
+  font-family: 'Fauna one', cursive; }
+  .picture a {
+    color: #e3effd;
+    text-decoration: none;
+    font-family: "Cinzel", cursive; }
+    .picture a:hover {
+      transform: scale(0.2, 0.2);
+      text-shadow: 4px 4px 4px black; }
+  .picture .picture-heading {
+    font-size: 40px;
+    font-family: "Cinzel", cursive;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px black; }
   .picture .box1 {
     grid-row-start: 1;
     grid-row-end: 2;
@@ -198,16 +211,18 @@ h2 {
       width: 200px;
       border-radius: 30px;
       overflow: hidden;
-      transition: all 1s ease; }
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
       .picture .box1 .box-content h2 {
-        background: #5170A8;
         margin: 0;
         width: 100%;
         padding: 5% 5% 5% 0%;
         z-index: 1; }
       .picture .box1 .box-content p {
+        display: none;
+        opacity: 0;
         margin: 0;
-        padding-top: 10%;
+        padding-top: 5%;
         height: 100%;
         transition: all 1s ease; }
     .picture .box1:hover .box-content {
@@ -215,7 +230,11 @@ h2 {
       border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box1:hover p {
+      display: block;
+      opacity: 1;
       background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box1:hover h2 {
+      background-color: #404968; }
   .picture .box2 {
     grid-row-start: 2;
     grid-row-end: 3;
@@ -230,16 +249,18 @@ h2 {
       width: 200px;
       border-radius: 30px;
       overflow: hidden;
-      transition: all 1s ease; }
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
       .picture .box2 .box-content h2 {
-        background: #5170A8;
         margin: 0;
         width: 100%;
         padding: 5% 5% 5% 0%;
         z-index: 1; }
       .picture .box2 .box-content p {
+        display: none;
+        opacity: 0;
         margin: 0;
-        padding-top: 10%;
+        padding-top: 5%;
         height: 100%;
         transition: all 1s ease; }
     .picture .box2:hover .box-content {
@@ -247,7 +268,11 @@ h2 {
       border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box2:hover p {
+      display: block;
+      opacity: 1;
       background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box2:hover h2 {
+      background-color: #404968; }
   .picture .box3 {
     grid-row-start: 3;
     grid-row-end: 4;
@@ -262,16 +287,18 @@ h2 {
       width: 200px;
       border-radius: 30px;
       overflow: hidden;
-      transition: all 1s ease; }
+      transition: all 1s ease;
+      background-color: rgba(64, 73, 104, 0.5); }
       .picture .box3 .box-content h2 {
-        background: #5170A8;
         margin: 0;
         width: 100%;
         padding: 5% 5% 5% 0%;
         z-index: 1; }
       .picture .box3 .box-content p {
+        display: none;
+        opacity: 0;
         margin: 0;
-        padding-top: 10%;
+        padding-top: 5%;
         height: 100%;
         transition: all 1s ease; }
     .picture .box3:hover .box-content {
@@ -279,7 +306,11 @@ h2 {
       border: 1px solid #e3effd;
       transform: scale(1.02, 1.02); }
     .picture .box3:hover p {
+      display: block;
+      opacity: 1;
       background-color: rgba(153, 205, 251, 0.7); }
+    .picture .box3:hover h2 {
+      background-color: #404968; }
 
 .blog {
   padding: 10%;
@@ -311,18 +342,18 @@ h2 {
   .picture2 h2 {
     color: #C3DDF4;
     font-size: 56px;
-    font-family: fredericka the great, cursive;
+    font-family: "Fauna One", cursive;
     text-shadow: 2px 2px 2px #404968;
     padding-top: 200px; }
     .picture2 h2 span {
       color: #99cdfb;
-      font-family: abril fatface, cursive; }
+      font-family: 'Cinzel', cursive; }
 
 footer {
   background: #404968;
   color: #e3effd; }
 
-@media (min-width: 876px) {
+@media (min-width: 1000px) {
   .title-page {
     padding-top: 0; }
 
@@ -338,12 +369,15 @@ footer {
     position: relative;
     opacity: 1;
     transform: translate(0, 0);
-    width: 100%; }
+    width: 100%;
+    padding-bottom: 21px; }
     .flexbox .dropdown .navmap li {
       z-index: inherit;
       padding-top: 6px;
       padding-bottom: 6px;
-      margin: 4px; }
+      margin: 4px;
+      border: 0px;
+      border-radius: 20px; }
       .flexbox .dropdown .navmap li:hover {
         background: #5170A8; }
       .flexbox .dropdown .navmap li a {
