@@ -1,4 +1,4 @@
-# DT Web Dev
+# DT Web Developer
 
 This is a portfolio website for myself which I'll be updating periodically. The idea is to make a functional webpage that showcases my skills 
 
@@ -25,8 +25,11 @@ All large images have fixed attachment
 * Contact Me - Picture of myself, blurb and social media links
 
 ## Target Audience
+
 This site is targetted towards future potential employers or clients
+
 ## Planning Process
+
 1. Began brainstorm on trello
 2. Came up with rough timeline using Beautiful.ai
 3. Began wireframe creation for mobile with figma
@@ -55,8 +58,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Erik Terwan[https://codepen.io/erikterwan/pen/grOZxx] - Adapted this Hamburger menu code
-* Flaticon[https://www.flaticon.com/] - for icons
+* [Erik Terwan](https://codepen.io/erikterwan/pen/grOZxx) - Adapted this Hamburger menu code
+* [Flaticon](https://www.flaticon.com/) - for icons
 
 ## Short Answer Q/A
 ### Describe key events in the development of the internet from the 1980s to today
