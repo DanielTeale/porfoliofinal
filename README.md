@@ -1,6 +1,8 @@
 
 # DT Web Developer
-
+## Links
+[github](https://github.com/DanielTeale/porfoliofinal)
+[website](https://danielteale.github.io/porfoliofinal/)
 This is a portfolio website for myself which I'll be updating periodically. The idea is to make a functional webpage that showcases my skills 
 
 ## Features

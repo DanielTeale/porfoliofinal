@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel:700|Fauna+One');
+
+$skyblue: rgb(153, 205, 251);
+$skybluetrans: rgba(153, 205, 251,0.7);
+$freshblue: #74A2E7;
+$darkgrey: #404968;
+$darkgreytrans: rgba(64, 73, 104,0.5);
+$lightblue: #C3DDF4;
+$lightbluetrans: rgba(195, 221, 244,0.7);
+$steelblue: #5170A8;
+$white:rgb(227, 239, 253);
+
+@mixin card-animation {
+  .box-content {
+    box-shadow: 7px 7px 5px 5px $darkgreytrans;
+    border: 1px solid $white;
+    transform:scale(1.02,1.02);
+  }
+  p{
+    display: block;
+    opacity: 1;
+    background-color: $skybluetrans;
+  }
+  h2 {
+    background-color: $darkgrey;
+  }
+}
+@mixin card-format {
+  width:100%;
+  height:100%;
+  transition: all 1s ease;
+  .box-content{
+    margin:5%;
+    width: 200px;
+    border-radius: 30px; 
+    overflow: hidden;
+    transition: all 1s ease;
+    background-color: $darkgreytrans;
+    h2 {
+      // background: $darkgreytrans;
+      margin:0;
+      width:100%;
+      padding:5% 5% 5% 0%;
+      // height:75px;
+      z-index: 1;
+    }
+    p{
+      display: none;
+      opacity:0;
+      margin:0;
+      padding-top:5%;
+      height:100%;
+      transition: all 1s ease;
+    }
+  }
+  &:hover{
+    @include card-animation()
+  }
+  
+}
+body {
+  width:100vw;
+  background-color: $white;
+  font-family: "Fauna One", cursive;
+  color: $darkgrey;
+  // background: url('../images/logo.png');
+  // background-attachment: fixed;
+  // background-size: cover;
+}
+
+p {
+  margin: 0;
+}
+
+h2{
+  margin:2%;
+  font-family:"Fauna One", cursive;
+}
+.flexbox {
+  position: fixed;
+  width:100vw;
+  height:75px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background: $skybluetrans;
+  z-index: 1;
+  box-shadow: 3px 3px 3px $darkgreytrans;
+  // position: fixed; 
+  // padding-left:5%;
+  // padding-right:85%;
+  
+  img {
+    width: 70px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    // border: 1px solid $lightblue;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    padding-right:5%;
+    span{
+      position: relative;
+      display:block;
+      height:4px;
+      width:40px;
+      background-color: $darkgrey;
+      z-index: 2;
+      // margin-right:300px;
+      opacity: 1;
+      margin-bottom:5px;
+      transition: all 0.4s ease;
+    }
+    .hamburger {
+      opacity:1;
+      // position: relative;
+      right:0;
+      top:0;
+      z-index: 3;
+      // position: relative;
+      // padding: 10%;
+      // float: right;
+    }
+    .navmap {
+      // display:none;
+      opacity:0;
+      text-align: center;
+      list-style: none;
+      position: absolute;
+      min-width:200px;
+      z-index: 2;
+      // transform: translate(100%,0);
+      transition: all 0.4s ease;
+      li {
+        display:inline-block;
+        padding: 20px;
+        width:100%;
+        background: $freshblue;
+        border:4px groove $lightbluetrans;
+      }
+      a {
+        margin:20px;
+        padding:20px;
+        text-decoration: none;
+        width:100%;
+        font-size: 24px;
+        color:$white;
+        text-shadow: 1px 1px 1px black;
+        }
+      }
+    }
+    input[type="checkbox"] {
+      // -webkit-appearance: none;
+      opacity:0;
+      background:black;
+      height:70px;
+      width:70px;
+      margin:0;
+      padding: 0;
+      position: absolute;
+      z-index: 3;
+      cursor: pointer;
+      top:-25px;
+      right:11px;
+      -webkit-touch-callout: none;
+    }
+    input:checked ~ .navmap{
+      opacity: 1;
+      transform: translate(-80%,0%);
+    }
+    input:checked ~ span {
+      &:nth-of-type(1){
+        transform-origin: 0% 0%;
+        transform: translate(2px,-5px)rotate(45deg);
+      }
+      &:nth-of-type(2){
+        opacity:0;
+      }
+      &:nth-of-type(3){
+        transform-origin: 0% 100%;
+        transform: translate(1px,4px)rotate(-45deg);
+      }
+    }
+  }
+  
+
+.title-page {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/jagged-mountain2.JPG');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position:center;
+  width:100%;
+  min-height: 600px;
+  padding-top:20%; 
+  font-family: "Cinzel", Arial, Helvetica, sans-serif;
+  box-shadow: 3px 3px 3px $darkgreytrans;
+  .preamble {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color:$lightblue;
+    font-size:54px;
+    text-align: center;
+    text-shadow: 2px 2px 3px $darkgrey, 2px 2px 3px $darkgrey, 2px 2px 3px $darkgrey;
+    min-width:450px;
+    width: 100%;
+    padding: 0%;
+    margin:0;
+    p:nth-of-type(1){
+      order:2;
+      margin: 0;
+      color: $steelblue;
+    }
+    p:nth-of-type(2){
+      order:3;
+      margin: 0;
+    }
+    p:nth-of-type(3){
+      order:4;
+      margin: 0;
+    }
+    img {
+      width:300px;
+      order:1;
+    }
+  }
+}
+
+#skills{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height:100%;
+  margin-top:5%;
+  .card {
+    min-width:300px;
+    height:300px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $skyblue;
+    border-radius:30px;
+    box-shadow: 4px 4px 4px 4px $darkgreytrans;
+    transition: all 0.3s linear;
+    p {
+      margin:10%;
+      // border: 1px solid $darkgrey;
+      width:260px;
+      padding: 5px;
+      height:500px;
+      background: $lightblue;
+    }
+    img{
+      background: $lightblue;
+      padding:20px;
+      padding-left:100px;
+      padding-right:100px;
+      margin:3%;
+    }
+    &:hover {
+      box-shadow: 7px 7px 8px 5px $darkgreytrans;
+      transform:scale(1.02,1.02);
+      // margin-left:5px;
+      // margin-bottom: 5px;
+    }
+  }
+}
+
+.picture{
+  background: url('../images/snowy-valley.JPG');
+  background-attachment: fixed;
+  background-position: center;
+  min-height:600px;
+  width:100%;
+  display: grid;
+  grid-row:repeat(3,33%);
+  text-align: center;
+  color:$lightblue;
+  text-shadow: 1px 1px 1px black, 1px 1px 1px black, ;
+  box-shadow: 3px 3px 3px 5px $darkgreytrans;
+  font-family: 'Fauna one', cursive; 
+  a {
+    color:$white;
+    text-decoration: none;
+    font-family: "Cinzel", cursive;
+    &:hover {
+      transform: scale(0.2,0.2);
+      text-shadow: 4px 4px 4px black;
+    }
+  }
+  .picture-heading {
+    font-size:40px;
+    font-family: "Cinzel", cursive;
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px black;
+  }
+  .box1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    @include card-format()
+  }
+  .box2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    @include card-format()
+  }
+  .box3{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: flex-end;
+    align-content: center;
+    @include card-format()
+  }
+}
+
+.blog {
+  padding: 10%;
+  box-shadow: 3px 3px 3px $darkgreytrans;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:400px;
+  margin:auto;
+  text-align: center;
+  .profile {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius:50%;
+  }
+  p {
+    padding:5%;
+  }
+}
+
+.picture2 {
+  background-image: url('../images/birds-flying.JPG');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height:100vh;
+  box-shadow: 4px 4px 4px 4px $darkgrey;
+  h2 {
+    color:$lightblue;
+    font-size: 56px;
+    font-family: "Fauna One", cursive;
+    text-shadow: 2px 2px 2px $darkgrey;
+    padding-top:200px;
+    span {
+      color:$skyblue;
+      font-family: 'Cinzel', cursive; 
+    }
+  }
+}
+
+footer {
+  background: $darkgrey;
+  color: $white;
+}
+
+@media (min-width:1000px) {
+  .title-page{
+    padding-top: 0;
+  }
+  .flexbox .dropdown span {
+    opacity: 0;
+  }
+  input {
+    display: none;
+  }
+  .flexbox .dropdown {
+    .navmap {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+      opacity: 1;
+      transform: translate(0,0);
+      width:100%;
+      padding-bottom: 21px;
+      
+      li {
+        z-index: inherit;
+        // padding: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;;
+        margin:4px;
+        border:0px;
+        border-radius: 20px;
+        &:hover {
+          background:$steelblue;
+        }
+        a{
+          text-align: left;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
